@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.main__contanier {
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-shadow: 0 0 1px gray;
+    background-color: white;
+}
+
+.contanier__logo {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    color: green;
+    font-size: 13px;
+    background-color: white;
+    color: black;
+    border: 1px solid #4caf50;
+    transition-duration: 0.4s;
+    width: 78px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.traktir__pushkin {
+    position: relative;
+    text-align: center;
+}
+
+.traktir__background {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 364px;
+}
+
+.bottom-left {
+    background-color: white;
+    box-shadow: 0px 0px 16px rgba(117, 117, 117, 0.2);
+    border-radius: 2px;
+    position: absolute;
+    width: 389px;
+    height: 204px;
+    left: 250px;
+    top: 80px;
+}
+
+.info {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar {
+    width: 1124px;
+    height: 80px;
+    top: 6px;
+    left: 250px;
+}
+
+.nav-link {
+    color: #327430;
+}
+
+.tabs-labels {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 40px;
+    row-gap: 15px;
+}
+
+.tabs>input[type='radio'] {
+    display: none;
+}
+
+.tabs-labels>label {
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    transition: 0.15s ease-out;
+    cursor: pointer;
+}
+
+.tabs-labels>label:hover {
+    color: var(--color-darkgray);
+}
+
+#tab-btn-1:checked~.tabs-labels #tab-btn-label-1,
+#tab-btn-2:checked~.tabs-labels #tab-btn-label-2,
+#tab-btn-3:checked~.tabs-labels #tab-btn-label-3,
+#tab-btn-4:checked~.tabs-labels #tab-btn-label-4,
+#tab-btn-5:checked~.tabs-labels #tab-btn-label-5,
+#tab-btn-6:checked~.tabs-labels #tab-btn-label-6 {
+    color: #4ca149;
+}
+
+.tabs-contents {
+    overflow: hidden;
+}
+
+.tab-content {
+    display: none;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#tab-btn-1:checked~.tabs-contents #menu-1,
+#tab-btn-2:checked~.tabs-contents #menu-2,
+#tab-btn-3:checked~.tabs-contents #menu-3,
+#tab-btn-4:checked~.tabs-contents #menu-4,
+#tab-btn-5:checked~.tabs-contents #menu-5,
+#tab-btn-6:checked~.tabs-contents #menu-6 {
+    display: block;
+    animation: trans-from-right 0.4s ease-out;
+}
+
+.dish__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-row-gap: 25px;
+}
+
+.dish-card {
+    border: 1px solid #75757533;
+    border-radius: 2px;
+    height: 160px;
+    display: flex;
+    flex-basis: calc(50% - 0.75rem);
+    overflow: hidden;
+}
+
+.dish-card:hover {
+    background-color: white;
+}
+
+.dish-desc {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.dish-fish {
+    position: absolute;
+}
+
+.dish__name {
+    font-size: 16px;
+    line-height: 24px;
+    position: absolute;
+    text-decoration: none;
+    pointer-events: none;
+    color: #1D1D1D;
+}
+
+.dish__description {
+    font-size: 13px;
+    line-height: 21px;
+    position: absolute;
+    text-decoration: none;
+    pointer-events: none;
+    color: #626262;
+}
+
+.dish__cent {
+    font-size: 15px;
+    line-height: 21px;
+    text-decoration: none;
+    pointer-events: none;
+    color: #1D1D1D;
+}
+
+.dish-pic {
+    object-fit: cover;
+}
+
+.tab-name-baloon-container {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 72px;
+    display: flex;
+    padding: 10px 0;
+    pointer-events: none;
+}
+
+.tab-name-baloon {
+    position: sticky;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    transition: opacity 0.5s;
+}
+
+.footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #262626;
+    max-width: 100%;
+    height: 100%;
+}
+
+.footer-logo {
+    padding: 40px 0;
+}
+
+.footer-hr {
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    border-top: 1px solid #FFFFFF;
+}
+
+.footer-links {
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32px;
+    flex-flow: row;
+}
+
+.footer-links-column {
+    flex-basis: 33.3333%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.footer-link {
+    padding: 8px 0;
+    color: white;
+    font-size: 0.8125rem;
+}
+
+.footer-legal {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.lang-selector {
+    border-radius: #3B3B3B;
+    border-color: #262626;
+    color: white;
+    font-size: 0.8rem;
+    padding: 10px 70px 10px 50px;
+    background: #3B3B3B;
+    appearance: none;
+    width: 12rem;
+}
+
+.lang-selector:focus {
+    outline: none;
+}
+
+.lang-selector-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 24px;
+    margin-left: -16px;
+}
+
+.lang-selector-container>img {
+    position: relative;
+    left: 30px;
+}
+
+.hashtag {
+    display: inline-block;
+    font-size: medium;
+}
+
+.hashtag::before {
+    content: '#';
+    color: #49A144;
+}
+
+.socials-symbols {
+    display: flex;
+    gap: 10px;
+    padding-top: 6px;
+    padding-bottom: 13px;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: gray;
+}
+
+.footer a:active {
+    color: white;
+}
+
+.footer-dw-labels {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .lang-selector {
+        width: 176px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-links {
+        flex-flow: column;
+    }
+    .footer-links-column {
+        flex-basis: 100%;
+    }
+    .footer-legal {
+        flex-flow: column nowrap;
+    }
+}
